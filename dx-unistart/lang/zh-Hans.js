@@ -45,8 +45,8 @@ export default {
 	},
 	grid:{
 		grid: "宫格组件",
-		visibleToAll: "所有人可见",
-		invisibleToTourists: "游客不可见",
+		visibleToAll: "所有人可见，so",
+		invisibleToTourists: "游客不可见,死数据",
 		adminVisible: "管理员可见",
 		clickTip: "点击第",
 		clickTipGrid: "个宫格",

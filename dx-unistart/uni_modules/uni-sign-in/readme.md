@@ -1,11 +1,11 @@
-#### 简介：培养用户习惯，提升用户粘性。签到得积分的应用营销功能，广告流量变现。
+#### 简介：培养用户习惯，提升用户粘性，支持广告流量变现的签到得积分功能。
 #### 功能支持：
 1. 每日签到奖励 (支持：普通签到、看广告签到)
 2. 周期性连续7日签到，奖励翻倍
 
 ### 使用看广告签到功能必读
 1.`普通签到`是通过clientDb实现，如果你要使用`看广告签到`的方式，
-	需要修改`opendb-sign-in.schema`中`permission` -> `create` 的值设置为`false`
+	为了防止刷量需要修改`opendb-sign-in.schema`中`permission` -> `create` 的值设置为`false`
 
 > 文件路径 :`uni_modules/uni-sign-in/uniCloud/database/opendb-sign-in.schema.json`
 
@@ -31,20 +31,20 @@
 
 ```js
 <template>
-	<uni-sign-in ref="signIn"></uni-sign-in>
-<template>
+	<view>
+		<uni-sign-in ref="signIn"></uni-sign-in>
+		<button type="default" @click="signIn">签到</button>
+	</view>
+</template>
 <script>
 	export default {
 		methods: {
-			signIn() { //普通签到
+			signIn() { //签到
 				this.$refs.signIn.open()
-			},
-			signInByAd(){ //看激励视频广告签到
-				this.$refs.signIn.showRewardedVideoAd()
 			}
 		}
 	}
-<script>
+</script>
 ```
 
 > 详情参考[uni-starter](https://ext.dcloud.net.cn/plugin?id=5057)

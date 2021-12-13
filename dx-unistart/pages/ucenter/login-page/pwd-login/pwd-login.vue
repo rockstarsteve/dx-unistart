@@ -16,7 +16,8 @@
 			<text class="link" @click="toRetrievePwd">{{$t('pwdLogin.forgetPassword')}}</text>
 			<text class="link" @click="toRegister">{{$t('pwdLogin.register')}}</text>
 		</view>
-		<uni-quick-login :agree="agree" ref="uniQuickLogin"></uni-quick-login>
+		<!-- 注释短信登录 -->
+		<!-- <uni-quick-login :agree="agree" ref="uniQuickLogin"></uni-quick-login> -->
 	</view>
 </template>
 
